@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">    
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <script  type="text/javascript">              
+      function validation()
+       {
+      
+      if(document.Form.name.value=="")
+      {  
+      alert("Please enter your full name")
+      document.Form.name.focus();
+      return false;  
+       }
+       if(document.Form.mail.value=="")
+      {  
+      alert("Please enter your email address")
+      document.Form.mail.focus();
+      return false;  
+       }
+       if(document.Form.pswd.value=="")
+      {  
+      alert("Please enter a unique password")
+      document.Form.pswd.focus();
+      return false;  
+       }
+      if(document.Form.phone.value=="")
+      {  
+      alert("Please enter your Phone number")
+      document.Form.phone.focus();
+      return false;  
+       }
+      
+      } 
+      </script> 
+      
+  </head>
+
+
+  <body style="background-color: cadetblue;">
+    <h1 style="text-align:center; color:black ; background-color: azure;">Course Registration Form</h1>
+    
+    
+      <form name="Form" onsubmit="return validation()" action=" " method="post">  
+        <ul>
+            <li>
+              <label for="name">Full Name*:</label>
+              <input type="text" id="name" name="name" required>       
+            </li>
+            <br>
+            <li>
+              <label for="mail">E-mail Addr.*:</label>
+              <input type="email" id="mail" name="mail" >         
+            </li>
+            <br>
+            <li>
+                <label for="pswd">Password*:</label>
+                <input type="password" id="pswd" name="pswd"  minlength="8" >
+            </li>
+            <br>
+            <li>
+                <label for="phone">Phone No*:</label>
+                <input type="tel" id="phone" name="phone"  minlength="10" >
+            </li>
+            <br>
+            <li> 
+                <p>Gender:</p> 
+                <input type="radio" id="male" name="gender" value="male" >        
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </li>
+            <br>
+            <li>
+                <label for="dob">Date of birth:</label>
+                <input type="date" id="dob" name="dob" >
+            </li>
+            <br>
+            <li>
+                <label for="clg">College Name:</label>
+                <input type="text" id="clg" name="clg">
+            </li>
+            <br>
+            <li>
+                <label for="qual">Qualification:</label >
+                <select name="qual" id="qual">                                       
+                <option value="School">School</option>
+                <option value="Undergraduate College">Undergraduate College</option>
+                <option value="Postgraduate College">Postgraduate College</option>
+                </select>
+            </li>
+            <br>
+            <li>
+                <p>Which Courses are You Interested ? (Please Select atleast one course)</p>
+      
+                <input type="checkbox" id="c1" name="c1" value="Computer Science Crash Course" >           
+                <label for="c1">Computer Science Crash Course</label>
+                <input type="checkbox" id="c2" name="c2" value="Computational Biology Crash Course">
+                <label for="c2">Computational Biology Crash Course</label><br>                       
+                <input type="checkbox" id="c3" name="c3" value="Engineering Mathematics Crash Course">
+                <label for="c3">Engineering Mathematics Crash Course</label>
+                <input type="checkbox" id="c4" name="c4" value="Machine Learning Crash Course">
+                <label for="c4">Machine Learning Crash Course</label>
+            </li>
+            <br>
+            <li>
+                <label for="msg">Suggestion of any additional courses:</label>
+                <textarea id="msg" name="user_message"></textarea>
+            </li>
+            <br><br>
+            <li class="button">
+                <button type="submit">Submit</button>
+            </li>
+            <li class="button">
+                <button type="reset">Reset</button>
+            </li>
+           </ul>
+            
+           
+    </form>
+  </body>
+</html>
